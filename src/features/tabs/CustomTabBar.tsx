@@ -1,4 +1,11 @@
-import {Alert, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Alert,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React, {FC} from 'react';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import {useSharedState} from './SharedContext';
@@ -14,20 +21,18 @@ import {
   LiveTabIcon,
   ReorderTabIcon,
 } from './TabIcons';
-import { useAppSelector } from '@states/reduxHook';
+import {useAppSelector} from '@states/reduxHook';
 
 const CustomTabBar: FC<BottomTabBarProps> = props => {
   const {scrollY} = useSharedState();
   const {state, navigation} = props;
   const bottom = useSafeAreaInsets();
 
-
   const {styles} = useStyles(tabStyles);
 
   //  state.routes this give the array of the routes screen
   const isLiveTabFocused = state.routes[state.index].name === 'Live';
 
-  
   const animatedStyle = useAnimatedStyle(() => {
     return {
       transform: [
@@ -64,8 +69,6 @@ const CustomTabBar: FC<BottomTabBarProps> = props => {
         <View style={styles.tabContainer}>
           {state.routes.map((route, index) => {
             const isFocused = state.index === index;
-       
-            
 
             const onPress = () => {
               const event = navigation.emit({
@@ -122,10 +125,12 @@ const CustomTabBar: FC<BottomTabBarProps> = props => {
           ]}
         />
         <TouchableOpacity
-        activeOpacity={0.9}
-        style={styles.groceryLogoContainer}
-        >
-            <Image source={require('@assets/icons/grocery.png')} style={styles.groceryLogo}/>
+          activeOpacity={0.9}
+          style={styles.groceryLogoContainer}>
+          <Image
+            source={require('@assets/icons/grocery.png')}
+            style={styles.groceryLogo}
+          />
         </TouchableOpacity>
       </Animated.View>
     </>

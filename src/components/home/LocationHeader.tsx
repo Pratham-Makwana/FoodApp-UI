@@ -1,11 +1,4 @@
-import {
-  Image,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, SafeAreaView, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useSharedState} from '@features/tabs/SharedContext';
 import {useStyles} from 'react-native-unistyles';
@@ -84,5 +77,3 @@ const LocationHeader = () => {
 };
 
 export default LocationHeader;
-
-const styles = StyleSheet.create({});

@@ -2,9 +2,6 @@ import {
   NativeScrollEvent,
   NativeSyntheticEvent,
   SectionList,
-  StyleSheet,
-  Text,
-  View,
   ViewToken,
 } from 'react-native';
 import React, {FC, useRef, useState} from 'react';
@@ -134,5 +131,3 @@ const MainList: FC = () => {
 };
 
 export default MainList;
-
-const styles = StyleSheet.create({});

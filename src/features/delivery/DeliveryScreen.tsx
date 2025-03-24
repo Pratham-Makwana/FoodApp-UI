@@ -56,11 +56,10 @@ const DeliveryScreen = () => {
         <Animated.View style={[backgroudColorChange, styles.topHeader]}>
           <HeaderSection />
         </Animated.View>
-
       </Animated.View>
 
       <Animated.View style={moveUpStyle}>
-        <MainList/>
+        <MainList />
       </Animated.View>
     </View>
   );
