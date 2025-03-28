@@ -121,7 +121,12 @@ export const cardSlice = createSlice({
           customizationOptions: any[];
         };
       }>,
-    ) => {},
+    ) => {
+      console.log("==> action",action.payload);
+      console.log("==> state",state.carts);
+      
+      
+    },
 
     removeCustomizableItem: (
       state,
