@@ -21,7 +21,7 @@ function transformSelectedOptions(
       (option: any) => option.type === type,
     );
 
-    if (!customization || !customization?.option[index as number]) {
+    if (!customization || !customization?.options[index as number]) {
       throw new Error(`Invalid customization type or index for ${type}`);
     }
 
